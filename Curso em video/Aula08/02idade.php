@@ -9,12 +9,13 @@
 <body>
 <div>
 	<?php
-		$nome = $_GET["nome"]
-		$ano  = $_GET["ano"];
-		$sexo = $_GET["sexo"];
-		$idade = date(y) - $ano;
-		echo "$nome tem $idade anos";
+		$nome = isset($_GET["nome"])?$_GET["nome"]:"[nao informado]";
+		$ano =  isset($_GET["ano"])?$_GET["ano"]:0;
+		$sexo = isset($_GET["sexo"])?$_GET["sexo"]:"[sem sexo]";
+		$idade = date("y") - $ano;
+		echo "$nome e tem $idade anos.";
 	?>
+	<a href="02exercicio.html">Voltar</a>
 </div>
 </body>
 </html>	
